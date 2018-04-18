@@ -1,0 +1,8 @@
+int8 decision
+float64 distance
+float64 oriX
+float64 oriY
+float64 oriZ
+float64 placX
+float64 placY
+float64 placZ

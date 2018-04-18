@@ -1,0 +1,25 @@
+<launch>
+
+  <!-- Device Drivers -->
+
+	<node name="copley_node" pkg="copley_node" type="copley_node"/>
+
+	<node name="osprey_node"  pkg="canberra_radiation_sensor" type="osprey_node"/>
+
+	<include file="$(find rplidar)/launch/rplidar.launch"/>
+
+	<node name="sick_laser_node" pkg="sick_dt1000_laser_range_sensor" type="sick_laser_node"/>
+
+	<include file="$(find ueye)/launch/nodelets.launch"/>
+
+	<include file="$(find xsens_driver)/launch/xsens_driver.launch"/>
+
+	<include file="$(find sick_visionary_t_driver)/launch/sick_visionary_t_driver.launch"/>
+
+  <!-- Higher Level Nodes -->
+	<node name="executive_node" pkg="executive" type="executive_node"/>
+
+	<!--TODO: Drive controller -->
+	<!--TODO: safeguarding -->
+	<!--TODO: logger -->
+</launch>
